@@ -1,0 +1,437 @@
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
+
+proxies:
+  - name: "BountyVPN | 🇦🇹 Австрия"
+    type: vless
+    server: eu.bridge.raw-srv.org
+    port: 443
+    uuid: 48e71357-a0ee-03f0-840e-ee322e9dd3c9
+    network: tcp
+    tls: true
+    servername: dropbox.com
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: HsKBZVsE7puWHs8AzpHhf5eEwj0imv51at6GRRmLs0A
+      short-id: 54150a1d4a31894b
+    udp: true
+
+  - name: "BountyVPN | 🇩🇪 Германия"
+    type: vless
+    server: eu.bridge.raw-srv.org
+    port: 443
+    uuid: 48e71357-a0ee-03ef-840e-ee322e9dd3c9
+    network: tcp
+    tls: true
+    servername: eu.bridge.raw-srv.org
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: HsKBZVsE7puWHs8AzpHhf5eEwj0imv51at6GRRmLs0A
+      short-id: 54150a1d4a31894b
+    udp: true
+
+  - name: "BountyVPN | 🇵🇱 Польша"
+    type: vless
+    server: eu.bridge.raw-srv.org
+    port: 443
+    uuid: 48e71357-a0ee-03ea-840e-ee322e9dd3c9
+    network: tcp
+    tls: true
+    servername: eu.bridge.raw-srv.org
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: HsKBZVsE7puWHs8AzpHhf5eEwj0imv51at6GRRmLs0A
+      short-id: 54150a1d4a31894b
+    udp: true
+
+  - name: "BountyVPN | 🇷🇺 Россия"
+    type: vless
+    server: eu.bridge.raw-srv.org
+    port: 443
+    uuid: 48e71357-a0ee-03e9-840e-ee322e9dd3c9
+    network: tcp
+    tls: true
+    servername: dropbox.com
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: HsKBZVsE7puWHs8AzpHhf5eEwj0imv51at6GRRmLs0A
+      short-id: 54150a1d4a31894b
+    udp: true
+
+  - name: "BountyVPN | 🇨🇭 Швейцария"
+    type: vless
+    server: 83.228.251.215
+    port: 2053
+    uuid: 1d4c405b-aafc-4ef3-bdd2-2f4631fbdb7d
+    network: grpc
+    tls: true
+    servername: www.samsung.com
+    client-fingerprint: qq
+    reality-opts:
+      public-key: Yvf8vQhWgDxFuubkdYmVYD9NIhu6PAfozl8uWLFpnyw
+      short-id: cb47593eddc639b7
+    grpc-opts:
+      grpc-service-name: cdn
+    udp: true
+
+  - name: "BountyVPN | 🇮🇳 Индия(боты Brawl Stars)"
+    type: vless
+    server: in.dendiboss.org
+    port: 443
+    uuid: 9b648dd0-d779-4627-945b-dc544c03c947
+    network: tcp
+    tls: true
+    servername: in.dendiboss.org
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: TEVTGq96qs-Tqu8c0pSbQYY9KeMuzWVcf3VV3SgsOQ8
+      short-id: 9c2378562188c3cb
+    udp: true
+
+  - name: "BountyVPN | 🇸🇪 Швеция (низкий пинг)"
+    type: vless
+    server: 185.189.46.63
+    port: 443
+    uuid: 9b648dd0-d779-4627-945b-dc544c03c947
+    network: grpc
+    tls: true
+    servername: swe.denditop.site
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: HZiMehwH6sQf4bDkLiXJ0KslpYqz0mNFwBr34-e6RRM
+      short-id: 9c2378562188c3cb
+    udp: true
+
+  - name: "BountyVPN | 🇯🇵 Япония(обход)"
+    type: hysteria2
+    server: jofdsfd.dendiboss.org
+    port: 443
+    password: 9b648dd0-d779-4627-945b-dc544c03c947
+    sni: jofdsfd.dendiboss.org
+    alpn:
+      - h3
+    fingerprint: chrome
+    skip-cert-verify: false
+
+  - name: "BountyVPN | 🇲🇩 Молдова"
+    type: vless
+    server: md.dendiboss.org
+    port: 443
+    uuid: 9b648dd0-d779-4627-945b-dc544c03c947
+    network: tcp
+    tls: true
+    servername: md.dendiboss.org
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: PQm4_ELMk_t2_-78lisq7Pt3aal3IVaC519prE_-Fh8
+      short-id: 9c2378562188c3cb
+    udp: true
+
+  - name: "BountyVPN | 🇷🇺 РФ | YouTube без рекламы"
+    type: vless
+    server: ru.dendiboss.org
+    port: 443
+    uuid: 9b648dd0-d779-4627-945b-dc544c03c947
+    network: tcp
+    tls: true
+    servername: ru.dendiboss.org
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js
+      short-id: 9c2378562188c3cb
+    udp: true
+
+  - name: "BountyVPN | Обход 1"
+    type: trojan
+    server: s45922.cdn.ngenix.net
+    port: 443
+    password: WAdYeURHN6rwc3Scn6NKshqKcfjNpdDo
+    network: ws
+    udp: true
+    sni: s45922.cdn.ngenix.net
+    client-fingerprint: chrome
+    ws-opts:
+      path: /api/user
+      headers:
+        Host: s45922.cdn.ngenix.net
+
+  - name: "BountyVPN | Обход 2"
+    type: trojan
+    server: s45922.cdn.ngenix.net
+    port: 443
+    password: WAdYeURHN6rwc3Scn6NKshqKcfjNpdDo
+    network: ws
+    udp: true
+    sni: s45922.cdn.ngenix.net
+    client-fingerprint: chrome
+    ws-opts:
+      path: /api/user
+      headers:
+        Host: s45922.cdn.ngenix.net
+
+  - name: "BountyVPN | Обход 3"
+    type: trojan
+    server: s45922.cdn.ngenix.net
+    port: 443
+    password: WAdYeURHN6rwc3Scn6NKshqKcfjNpdDo
+    network: ws
+    udp: true
+    sni: s45922.cdn.ngenix.net
+    client-fingerprint: chrome
+    ws-opts:
+      path: /api/user
+      headers:
+        Host: s45922.cdn.ngenix.net
+
+  - name: "BountyVPN | 🇳🇱 Нидерланды(фулл операторы)"
+    type: vless
+    server: mimo-de2.rucdncomp.pro
+    port: 8444
+    uuid: dc76ea8a-6a7b-4ef8-b024-ab59a5ddd32f
+    network: grpc
+    tls: true
+    servername: mimo-de2.rucdncomp.pro
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+    grpc-opts:
+      grpc-service-name: ""
+    udp: true
+
+  - name: "BountyVPN | LTE (Test обход)"
+    type: vless
+    server: 178.173.240.158
+    port: 443
+    uuid: b97941b8-aa57-47fe-bea3-6bb28cd52359
+    network: tcp
+    tls: true
+    servername: tradingview.com
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: 5-G2Jbe2toOW-blAlBR5KfwPIM0st9qpnPQLgB2UOUM
+      short-id: 62696004ae5c2857
+    udp: true
+
+  - name: "BountyVPN | LTE 2(Test обход)"
+    type: vless
+    server: 178.173.240.158
+    port: 443
+    uuid: b97941b8-aa57-47fe-bea3-6bb28cd52359
+    network: tcp
+    tls: true
+    servername: tradingview.com
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 5-G2Jbe2toOW-blAlBR5KfwPIM0st9qpnPQLgB2UOUM
+      short-id: 62696004ae5c2857
+    udp: true
+
+  - name: "BountyVPN | LTE 3(Обход Test) TCP"
+    type: vless
+    server: de.vz-or.com
+    port: 443
+    uuid: 3c60b33d-232c-4a40-8e1d-c78af8473351
+    network: tcp
+    tls: true
+    servername: ads.x5.ru
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: RJETAkoZ6lowmwc5f0HtPy00c3dfojqQuypriLExXRE
+      short-id: abbcd128
+    udp: true
+
+  - name: "BountyVPN | LTE 3(Обход Test) gRPC"
+    type: vless
+    server: kkooa.vz-or.com
+    port: 443
+    uuid: 3c60b33d-232c-4a40-8e1d-c78af8473351
+    network: grpc
+    tls: true
+    servername: ads.x5.ru
+    client-fingerprint: qq
+    reality-opts:
+      public-key: RJETAkoZ6lowmwc5f0HtPy00c3dfojqQuypriLExXRE
+      short-id: abbcd128
+    grpc-opts:
+      grpc-service-name: ads.x5.ru
+    udp: true
+
+  - name: "BountyVPN | 🇷🇺Обход белых списков NEW"
+    type: vless
+    server: 46.243.232.112
+    port: 1449
+    uuid: f7a3473d-3df9-4c67-be28-c6bfdd9e0ab5
+    network: xhttp
+    tls: true
+    servername: ads.x5.ru
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ma1sfxr9KLRlUY27L-P8femXtXkjB-NAb-24mZEX3Bo
+    xhttp-opts:
+      mode: auto
+      path: /
+      extra:
+        xmux:
+          cMaxReuseTimes: 0
+          maxConcurrency: "16-32"
+          maxConnections: 0
+          hKeepAlivePeriod: 0
+          hMaxRequestTimes: "600-900"
+          hMaxReusableSecs: "1800-3000"
+        xPaddingBytes: "100-1000"
+        scMaxEachPostBytes: 1000000
+        scMinPostsIntervalMs: 30
+        scStreamUpServerSecs: "20-80"
+    udp: true
+
+  - name: "BountyVPN | 🇷🇺Обход белых списков #2"
+    type: vless
+    server: 46.243.232.112
+    port: 5432
+    uuid: f7a3473d-3df9-4c67-be28-c6bfdd9e0ab5
+    network: xhttp
+    tls: true
+    servername: ads.x5.ru
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ma1sfxr9KLRlUY27L-P8femXtXkjB-NAb-24mZEX3Bo
+    xhttp-opts:
+      mode: auto
+      path: /
+      extra:
+        xmux:
+          cMaxReuseTimes: 0
+          maxConcurrency: "16-32"
+          maxConnections: 0
+          hKeepAlivePeriod: 0
+          hMaxRequestTimes: "600-900"
+          hMaxReusableSecs: "1800-3000"
+        xPaddingBytes: "100-1000"
+        scMaxEachPostBytes: 1000000
+        scMinPostsIntervalMs: 30
+        scStreamUpServerSecs: "20-80"
+    udp: true
+
+  - name: "BountyVPN | 🇷🇺Обход белых списков #3"
+    type: vless
+    server: 78.159.246.27
+    port: 5432
+    uuid: f7a3473d-3df9-4c67-be28-c6bfdd9e0ab5
+    network: xhttp
+    tls: true
+    servername: ads.x5.ru
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ma1sfxr9KLRlUY27L-P8femXtXkjB-NAb-24mZEX3Bo
+    xhttp-opts:
+      mode: auto
+      path: /
+      extra:
+        xmux:
+          cMaxReuseTimes: 0
+          maxConcurrency: "16-32"
+          maxConnections: 0
+          hKeepAlivePeriod: 0
+          hMaxRequestTimes: "600-900"
+          hMaxReusableSecs: "1800-3000"
+        xPaddingBytes: "100-1000"
+        scMaxEachPostBytes: 1000000
+        scMinPostsIntervalMs: 30
+        scStreamUpServerSecs: "20-80"
+    udp: true
+
+  - name: "BountyVPN | 🇳🇴 Норвегия (Игровой)"
+    type: vless
+    server: 31.59.39.245
+    port: 1499
+    uuid: f7a3473d-3df9-4c67-be28-c6bfdd9e0ab5
+    network: xhttp
+    tls: true
+    servername: amd.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ma1sfxr9KLRlUY27L-P8femXtXkjB-NAb-24mZEX3Bo
+    xhttp-opts:
+      mode: auto
+      path: /
+      extra:
+        xmux:
+          cMaxReuseTimes: 0
+          maxConcurrency: "16-32"
+          maxConnections: 0
+          hKeepAlivePeriod: 0
+          hMaxRequestTimes: "600-900"
+          hMaxReusableSecs: "1800-3000"
+        xPaddingBytes: "100-1000"
+        scMaxEachPostBytes: 1000000
+        scMinPostsIntervalMs: 30
+        scStreamUpServerSecs: "20-80"
+    udp: true
+
+  - name: "BountyVPN | 🇪🇪 Эстония(низкий пинг)"
+    type: vless
+    server: 150.241.101.199
+    port: 443
+    uuid: f7a3473d-3df9-4c67-be28-c6bfdd9e0ab5
+    network: tcp
+    tls: true
+    servername: google.com
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: Fp0-VrMBeaQe9xOrehDYHt0mqTZL-5CdfuMEzoXkOE8
+    udp: true
+
+proxy-groups:
+  - name: "🚀 Авто-выбор"
+    type: url-test
+    proxies:
+      - "BountyVPN | 🇦🇹 Австрия"
+      - "BountyVPN | 🇩🇪 Германия"
+      - "BountyVPN | 🇵🇱 Польша"
+      - "BountyVPN | 🇷🇺 Россия"
+      - "BountyVPN | 🇨🇭 Швейцария"
+      - "BountyVPN | 🇮🇳 Индия(боты Brawl Stars)"
+      - "BountyVPN | 🇸🇪 Швеция (низкий пинг)"
+      - "BountyVPN | 🇯🇵 Япония(обход)"
+      - "BountyVPN | 🇲🇩 Молдова"
+      - "BountyVPN | 🇷🇺 РФ | YouTube без рекламы"
+      - "BountyVPN | Обход 1"
+      - "BountyVPN | Обход 2"
+      - "BountyVPN | Обход 3"
+      - "BountyVPN | 🇳🇱 Нидерланды(фулл операторы)"
+      - "BountyVPN | LTE (Test обход)"
+      - "BountyVPN | LTE 2(Test обход)"
+      - "BountyVPN | LTE 3(Обход Test) TCP"
+      - "BountyVPN | LTE 3(Обход Test) gRPC"
+      - "BountyVPN | 🇷🇺Обход белых списков NEW"
+      - "BountyVPN | 🇷🇺Обход белых списков #2"
+      - "BountyVPN | 🇷🇺Обход белых списков #3"
+      - "BountyVPN | 🇳🇴 Норвегия (Игровой)"
+      - "BountyVPN | 🇪🇪 Эстония(низкий пинг)"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 50
+
+rules:
+  - MATCH,🚀 Авто-выбор
